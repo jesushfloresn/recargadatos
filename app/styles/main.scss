@@ -1,0 +1,628 @@
+$icon-font-path: '../fonts/';
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+$azul-fondo: #1337aa;
+$azul-texto: #1337AA;
+$blanco: #FFF;
+$verde-1: #ADD036;
+$gris-texto: #92979B;
+$gris-texto-tabla: #92979B;
+$gris-fondo: #EFEFEF;
+
+/*
+  ||- Styles Ys
+*/
+body{
+  background-color: $azul-fondo;
+  font-family: 'Raleway', sans-serif;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.alert{
+  border-radius: 0;
+}
+.dgcontentpage-recargadatos{
+
+  .container-extended-header{
+    background-color: #FFF;
+  }
+
+}
+
+//===> Styles General
+.dg-content-img{
+  background-color: #000;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+
+  &.zoom{
+    .dg-imgback{
+      -moz-transform: scale(1.25);
+      -webkit-transform: scale(1.25);
+      transform: scale(1.25);
+    }
+  }
+
+  .dg-imgback{
+    //background-image: url("../images/nosotros/nosotros_1.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    position: absolute;
+
+    -moz-transition:all 3s;
+    -webkit-transition:all 3s;
+    transition:all 3s;
+  }
+
+  .dg-content-text{
+    background-color: transparent;
+    position: relative;
+    top: 200px;
+
+    h5, h6{
+      color: #FFF;
+      margin: 0;
+
+    }
+    h5{
+      font-size: 1.8em;
+      margin-bottom: 6px;;
+    }
+    h6{
+      font-size: 1.4em;
+    }
+    .dg-line{
+      background-color: #FFF;
+      height: 1px;
+      margin-top: 12px;
+      width: 100px;
+    }
+    .dg-content-btn{
+      margin-top: 65px;
+      button{
+        border: none;
+        background-color: #ADD036;
+        padding: 0.25em 3em;
+        a{
+          color: #526000;
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+}// end - .dg-content-img
+
+.dg-infophoto{
+  position: relative;
+  margin-top: 72px;
+
+  //---
+  &.dg-photoleft{
+    .dg-contentimg{
+      border-left: solid 9px $verde-1;
+    }
+  }
+  &.dg-photoright{
+    .dg-contentimg{
+      border-right: solid 9px $verde-1;
+    }
+  }
+
+  //--
+  .dg-contentimg{
+    background-color: rgba(0,0,0, 0.5);
+    background-size: cover;
+    background-position: center center;
+    min-width: 90%;
+    //min-height: 150px;
+  }
+
+  .dg-contentinfo{
+    .dg-slogan{
+      margin-bottom: 25px;
+      h5, h6{
+        margin: 0;
+      }
+      h6{
+        color: $azul-texto;
+        font-size: 1.25em;
+      }
+      h5{
+        color: $verde-1;
+        font-size: 1.72em;
+      }
+      .dg-line{
+        background-color: $verde-1;
+        display: inline-block;
+        height: 1px;
+        margin-top: 9px;
+        width: 150px;
+      }
+    }
+    //---
+    .dg-content-text{
+      p{
+        color: $gris-texto;
+        margin-bottom: 25px;
+        text-align: justify;
+      }
+    }
+  }
+}// - end - dg-infophoto
+
+.dg-content-slogan{
+  padding-top: 66px;
+  text-align: center;
+
+  .dg-container{
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 2em 0.5em;
+  }
+
+  h5, h6{
+    margin: 0;
+  }
+
+  h6{
+    color: $azul-texto;
+    font-size: 1.5em;
+  }
+  h5{
+    color: $verde-1;
+    font-size: 2em;
+  }
+  .dg-line{
+    background-color: $verde-1;
+    display: block;
+    height: 1px;
+    margin-top: 9px;
+    margin-left: 42px;
+    width: 90px;
+
+  }
+}// end - dg-content-slogan
+
+.dg-contentlogos{
+  margin-bottom: 66px;
+  .dg-logo{
+    position: relative;
+    min-height: 70px;
+    img{
+      position: absolute;
+      width: 80%;
+    }
+  }
+  .dg-content-btn{
+    text-align: center;
+    position: relative;
+    margin-top: 100px;
+  }
+}
+
+.dg-btn-green{
+  border: none;
+  background-color: #ADD036;
+  padding: 0.25em 3em;
+  color: #526000;
+  font-size: 0.8em;
+  a{
+    color: #526000;
+    font-size: 0.8em;
+  }
+}
+
+//===> end - Styles General
+
+
+//===>Sección Nav
+.dg-content-nav{
+
+  #dg-contentmenu{    
+    .navbar-header{
+      .navbar-brand{
+        display: inline-block;
+        padding: 0;
+        img{
+          width: 100%;
+          max-width: 126px;
+          min-width: 126px;
+        }
+      }
+    }    
+  }
+}// end - .dg-content-nav
+//===> end - Sección Nav
+
+.dg-seccion{
+  &.active{
+    display: block;
+  }
+  &.hidde{
+    display: none;
+  }
+}
+
+//===>Seccion Sesion
+.dg-seccion-sesion{  
+  padding-top: 6%;
+  .content-bodyseccion{
+    background-image: url('../images/celular.svg');
+    background-repeat: no-repeat;
+    background-position: center 26%;
+    background-size: contain;
+    height: 95%;
+    padding-bottom: 9%;
+
+    .dg-content-slogan{
+      background-color: transparent;
+      color: #FFF;
+      padding-top: 38%;
+      text-align: left;
+
+      h5{
+        color: #FFF;
+        font-size: 2.25em;
+        font-weight: 700;
+      }
+      p{
+        font-size: 1.25em;
+        font-weight: 400;
+      }
+
+    }
+
+    .dg-content-form{
+      margin-top: 30px;
+      .dg-content-input{
+        position: relative;
+        margin-bottom: 20px;
+
+        img{
+          position: absolute;
+          height: 25px;
+          width: 25px;
+          top: 7px;
+          left: 10px;
+        }
+        input{
+          background-color: rgba(255,255,255, 0.2);
+          border: solid 1px #0865c1;
+          color: #FFF;
+          padding: 10px 5px 10px 40px;
+          min-width: 350px;
+
+          &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #FFF;
+          }
+          &::-moz-placeholder { /* Firefox 19+ */
+            color: #FFF;
+          }
+          &:-ms-input-placeholder { /* IE 10+ */
+            color: #FFF;
+          }
+          &:-moz-placeholder { /* Firefox 18- */
+            color: #FFF;
+          }
+
+        }
+      }
+      .dg-content-btn{
+        text-align: center;
+        button{
+          background-color: #add036;
+          border: none;
+          color: #526000;
+          display: block;
+          font-weight: 700;
+          margin-left: 80px;
+          width: 180px;
+        }
+        .dg-lnk-restablecer{
+          display: block;
+          margin-left: 80px;
+          margin-top: 30px;
+          width: 180px;
+          a{
+            color: #FFF;
+            font-size: 0.85em;
+          }
+        }
+      }
+    }// dg-content-form
+
+  }//end - content-bodyseccion
+
+  .dg-content-input img{
+    -moz-animation-duration: 3s;
+    -moz-animation-delay: 4s;
+    -moz-animation-iteration-count: infinite;
+
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 4s;
+    -webkit-animation-iteration-count: infinite;
+
+    -o-animation-duration: 3s;
+    -o-animation-delay: 4s;
+    -o-animation-iteration-count: infinite;
+
+    animation-duration: 3s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+
+  }
+}// end - dg-seccion-sesion
+
+//---
+.footer{
+  background-color: $azul-fondo;
+  color: #FFF;
+  font-size: 0.65em;
+  padding: 15px 0 15px 0;
+  text-align: center;
+  p{
+    color: #FFF;
+    margin: 0;
+  }
+}
+
+/*--
+  -- MediaQuerys
+--*/
+@media screen and (max-width: 980px) {
+  body{
+    font-size: 12px;
+  }
+  .dg-content-img{
+    min-height: 450px;
+  }
+  .dg-content-img{
+    .dg-content-text{
+      top: 150px;
+    }
+  }
+  .dg-content-img{
+    .dg-imgback{
+      background-position: center center;
+    }
+  }
+
+  .dg-seccion-nosotros{
+    .dg-content-img{
+      .dg-imgback{
+        background-image: url("../images/nosotros/nosotros_980.jpg");
+      }
+    }
+
+    .dg-icons-beneficios{
+      .gmm-contenticon{
+        div{
+          &:nth-of-type(2){
+            img{
+              width: 30%;
+            }
+          }
+        }
+      }
+    }
+  }//--end seccion-nosotros  
+
+}// end - media 980
+
+@media screen and (max-width: 768px) {
+  .dg-content-img{
+    min-height: 261px;
+    .dg-content-text{
+      top: 50px;
+    }
+  }
+
+  .dg-infophoto{
+    overflow: hidden;
+    .dg-contentimg{
+      margin: 0 auto;
+      min-width: 50%;
+      width: 50%;
+    }
+    .dg-contentinfo{
+      margin-top: 33px;
+
+      .dg-slogan{
+        text-align: center;
+      }
+
+      .dg-content-text{
+        padding: 0 2em;
+      }
+    }
+  }
+
+  .dg-contentlogos{
+    padding-bottom: 1.5em;
+    .dg-logo{
+      min-height: 60px;
+      img{
+        width: 50%;
+      }
+    }
+  }
+
+  .container-interno{
+    .content-bodyseccion{
+      background-position: center bottom;
+
+      .dg-content-slogan{
+        padding-top: 15%;
+      }
+
+      .dg-content-form{
+        .dg-content-input{
+          margin: 0 auto;
+          padding-bottom: 10px;
+          width: 80%;
+          input{
+            min-width: 100%;
+          }
+        }
+        .dg-content-btn{
+          button{
+            margin: 0 auto;
+            margin-top: 20px;
+          }
+
+          .dg-lnk-restablecer{
+            margin: 0 auto;
+            margin-top: 20px;
+          }
+        }
+      }
+
+    }
+  }// -- end - .container-interno
+
+  .dg-seccion-nosotros{
+    .dg-content-provedores{
+      padding-bottom: 21px;
+    }
+  }
+
+  .dg-seccion-app {
+    img{
+      margin: 0 auto;
+      width: 72%;
+    }
+    .dg-sloganapp{
+      margin-top: 12%;
+      text-align: center;
+    }
+  }
+
+}// end - 768px
+
+@media screen and (max-width: 767px) {
+  .dg-seccion-sesion{
+    padding-top: 15%;
+  }
+
+  .dg-content-nav {
+    #dg-contentmenu{
+      .navbar-header{
+        padding-bottom: 6px;
+
+        a.navbar-brand{
+          img{
+            display: block;
+            max-width: 90px;
+            min-width: 90px;
+            padding: 9px 0;
+          }
+        }
+      }
+    }
+  }
+  
+  
+
+}// emd - 767px
+
+//---
+@media screen and (max-width: 600px) {
+  body{
+    font-size: 14px;
+  }
+  .header{
+    .dgcontent-logo{
+      img{
+        max-width: 110px;
+      }
+
+    }
+  }
+  .container-interno{
+    font-size: 12px;
+    .content-bodyseccion{
+      background-image: url('../images/celular-centrado.svg');
+      background-position: top center;
+      background-size: 150px 150px;
+      .dg-content-slogan{
+        padding-top: 160px;
+      }
+
+      .dg-content-form{
+        .dg-content-input{
+          padding-bottom: 15px;
+          width: 100%;
+          input{
+            min-width: 100%;
+          }
+        }
+      }
+
+    }
+  }
+}// end - max-width 600
+
+@media screen and (max-width: 360px) {
+  .dg-seccion-nosotros{
+    .dg-content-img{
+      .dg-imgback{
+        background-image: url("../images/nosotros/nosotros_360.jpg");
+      }
+    }
+  }//--end seccion-nosotros
+
+  .dg-seccion-servicios{
+    .dg-servicios-seccion-1{
+      .dg-content-img{
+        .dg-imgback{
+          background-image: url("../images/servicios/paquetes/paquetes_360.jpg");
+        }
+      }
+      .dg-infophoto{
+        .dg-contentimg{
+          //background-image: url("../images/servicios/paquetes/paquete_de_datos_2.jpg");
+        }
+      }
+    }// end - seccion1
+
+    .dg-servicios-seccion-2{
+      .dg-content-img{
+        .dg-imgback{
+          background-image: url("../images/servicios/recarga/recarga_360.jpg");
+        }
+      }
+      .dg-infophoto{
+        .dg-contentimg{
+          //background-image: url("../images/servicios/recarga/recargas_tiempo_aire_2.jpg");
+        }
+      }
+    }// end -seccion2
+
+    .dg-servicios-seccion-3{
+      .dg-content-img{
+        .dg-imgback{
+          background-image: url("../images/servicios/pago/pago_360.jpg");
+        }
+      }
+      .dg-infophoto{
+        .dg-contentimg{
+          //background-image: url("../images/servicios/pago/pago_de_servicios_2.jpg");
+        }
+      }
+    }// end - seccion3
+
+  }
+
+  .dg-seccion-contacto{
+    .dg-content-img{
+      .dg-imgback{
+        background-image: url("../images/contacto/contacto_360.jpg");
+      }
+    }
+  }// end - seccion-contacto
+}// end - max-width 360
